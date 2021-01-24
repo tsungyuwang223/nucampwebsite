@@ -30,13 +30,10 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col">
-                <dive class="row">
-                    <a type="button" class="btn btn-info text-white">Reserve Campsite</a>
-                </dive>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info">Reserve Campsite</a>
+                </div>
             </div>
-        </div>
-        </div>
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -82,7 +79,7 @@
                 <h3>React Lake Campground</h3>
                 <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                 </div>
-                <img class="d-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake" />
+                <img class="d-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake" />
    			</div>
         </div>
     </div>
@@ -103,41 +100,45 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center">
-            <div class="col-sm-6">
+        <div class="row row-content">
+            <div class="col-sm-6 mx-auto">
             <div class="card">
             <h3 class="card-header bg-info text-white">Reverve a Campsite</h3>
               <div class="card-body">
                   <form id="reserveForm">                      
-                  <div class="row">                    
-                    <div class="form-group">
-                        <label for="nuCampers" class="col col-form-label">Number of Campers</label>
-                        <select class="form-control" id="nuCampers">
-                            <option selected>Select...</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                        </select>
-                        
-                        <label for="nuCampers" class="col col-form-label">Date</label>
-                        <input type="date" class="form-control" id="date" placeholder="date">
+                  <div class="row form-group">   
+                        <label for="nuCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                        <!-- Select Dropdown -->
+                                <div class="col">
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>   
+                            <!-- Date -->
+                            <div class="form-group row">
+                                <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                <div class="col">   
+                                    <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+                                </div>
+                            </div>
+                            <!-- Search Button -->
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
-                  </form>
-                  <div class="row">
-                    <div class="col col-form-label">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </div>
-                  </div>
-              </div>
             </div>
-          </div>
         </div>
-
     </div>
 
     <footer>
